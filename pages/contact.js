@@ -3,7 +3,7 @@ import { content } from '../data/content';
 
 export default function Contact() {
   return (
-    <Layout title="Contact - Minimal Portfolio">
+    <Layout title="Contact - World of Krishna">
       <section className="max-w-xl">
         <h1 className="mb-8">{content.contact.title}</h1>
         <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
