@@ -11,7 +11,7 @@ export const content = {
       "I like working where ambiguity is high and the feedback loops are fast — talking to users, analysing data, and turning messy problems into simple, elegant workflows."
     ],
     
-    current: "Lately, I'm learning LangGraph and building AI Agents to reduce operational noise, improve decisions, and unlock new product experiences.",
+    current: "I'm learning LangGraph and building AI Agents to reduce operational noise, improve decisions, and unlock new product experiences.",
     
     skillsTitle: "What I do",
     skills: [
