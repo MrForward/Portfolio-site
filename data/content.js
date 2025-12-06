@@ -52,7 +52,7 @@ export const content = {
       { name: "Twitter / X", link: "https://x.com/chaitanyabuilds" },
       { name: "LinkedIn", link: "https://www.linkedin.com/in/chaitanya-athukuri" },
       { name: "Calendly", link: "https://calendly.com/chaitanyaathukuri/connect" },
-      { name: "Instagram", link: "https://www.instagram.com/telugu_decodes" },
+      // { name: "Instagram", link: "https://www.instagram.com/telugu_decodes" },
     ]
   }
 };
