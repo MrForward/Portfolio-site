@@ -1,55 +1,58 @@
 export const content = {
   home: {
     title: "Hello, I'm",
-    name: "Jules",
-    description: "I'm a software engineer passionate about building clean, efficient, and user-friendly applications. I specialize in minimalism and typography-focused design.",
+    name: "Krishna",
+    description: "I build AI-driven, user-first products for fast-moving teams.",
   },
   about: {
     title: "About Me",
     bio: [
-      "I am a dedicated developer with a love for clean code and simple design. My journey started when I realized that the best tools are the ones that get out of the way and let you focus on the task at hand.",
-      "Currently, I am working on creating accessible web experiences using modern technologies like Next.js, React, and Tailwind CSS."
+      "A curious builder and Product Manager with 4+ years of experience taking products from 0 → 1 across B2B and B2C. I’ve shipped and scaled global platforms at Nielsen, led HRTech SaaS at Altimetrik, and previously co-founded a short-video startup.",
+      "I like working where ambiguity is high and the feedback loops are fast — talking to users, analysing data, and turning messy problems into simple, elegant workflows."
     ],
+    
+    current: "Lately, I'm learning LangGraph and building AI Agents to reduce operational noise, improve decisions, and unlock new product experiences.",
+    
     skillsTitle: "What I do",
     skills: [
-      "Full Stack Development",
-      "UI/UX Design",
-      "Performance Optimization",
-      "Open Source Contribution"
+      "0 → 1 Product Building",
+      "AI Agents & Automation",
+      "Product Strategy & Roadmapping",
+      "GTM & Experimentations"
     ]
   },
   work: {
     title: "Selected Work",
     projects: [
       {
-        title: 'Project Alpha',
-        description: 'A minimalist task management app built with React and Firebase.',
+        title: 'Nielsen Media - PM 2',
+        description: 'Lead product for three global content-measurement products used by major publishers and platforms across the US & 5 Other Countries',
         link: '#',
-        year: '2023',
+        year: '2024 - Present',
       },
       {
-        title: 'Beta Commerce',
-        description: 'Headless e-commerce template using Next.js and Shopify.',
+        title: 'Altimetrik - Product Manager',
+        description: 'Led the end-to-end creation of onboarding, sourcing modules and Innovation for an HRTech SaaS platform DEX, improving candidate quality and significantly cutting hiring costs.',
         link: '#',
-        year: '2023',
+        year: '2022-24',
       },
       {
-        title: 'Gamma Dashboard',
-        description: 'Data visualization dashboard for internal analytics.',
+        title: 'Astrotoppex - Cofounder',
+        description: 'Launched a creator-led short-video app from scratch to 10K+ downloads, 2K DAU, and 130 creators in 12 days, alongside a services arm scaled to ₹2M+ MRR.',
         link: '#',
-        year: '2022',
+        year: '2020-21',
       },
     ]
   },
   contact: {
     title: "Get in Touch",
-    description: "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
-    email: "hello@example.com",
+    description: "I’m always up for jamming on new products, AI workflows, or growth ideas. If you’re building something interesting or want help shaping your product let’s talk.",
+    email: "hello@chaitanyaa.lol",
     socials: [
-      { name: "Twitter / X", link: "#" },
-      { name: "LinkedIn", link: "#" },
-      { name: "GitHub", link: "#" },
-      { name: "Instagram", link: "#" },
+      { name: "Twitter / X", link: "https://x.com/chaitanyabuilds" },
+      { name: "LinkedIn", link: "https://www.linkedin.com/in/chaitanya-athukuri" },
+      { name: "Calendly", link: "https://calendly.com/chaitanyaathukuri/connect" },
+      { name: "Instagram", link: "https://www.instagram.com/telugu_decodes" },
     ]
   }
 };

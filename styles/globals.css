@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Import Inter font from Google Fonts via CSS (simplest way without next/font for now) */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 @layer base {
   body {
@@ -15,16 +15,48 @@
 }
 
 /* Typography polish */
-h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold tracking-tight;
 }
 
 h1 {
-    @apply text-4xl mb-4;
+  @apply text-4xl mb-4;
 }
 h2 {
-    @apply text-2xl mb-3;
+  @apply text-2xl mb-3;
 }
 p {
-    @apply mb-4 leading-relaxed;
+  @apply mb-4 leading-relaxed;
+}
+
+.animated-dot {
+  display: inline-block;
+  margin-left: 6px;
+  opacity: 0;
+  transform: translateY(0);
+  animation: dotFade 3s ease-in-out infinite;
+}
+
+@keyframes dotFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(2px);
+  }
 }

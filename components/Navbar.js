@@ -14,13 +14,16 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-between items-center py-10 mb-12">
-      <div className="text-xl font-bold tracking-tight">
+      {/* keep brand from shrinking and give it right margin for spacing */}
+      <div className="text-xl font-bold tracking-tight flex-shrink-0 mr-6">
         <Link href="/">
-          Portfolio.
+          Krishna.
         </Link>
       </div>
+
       <div className="flex items-center gap-6">
-        <ul className="flex gap-6 text-sm font-medium">
+        {/* add left margin on small screens so "About" doesn't sit too close to brand */}
+        <ul className="flex gap-6 text-sm font-medium ml-2 sm:ml-6">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link href={item.path} className={`hover:text-blue-500 transition-colors ${router.pathname === item.path ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}>
