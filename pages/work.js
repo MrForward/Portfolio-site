@@ -3,7 +3,7 @@ import { content } from '../data/content';
 
 export default function Work() {
   return (
-    <Layout title="Work - Minimal Portfolio">
+    <Layout title="Work - World of Krishna">
       <section>
         <h1 className="mb-12">{content.work.title}</h1>
         <div className="space-y-12">
