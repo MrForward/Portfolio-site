@@ -21,7 +21,7 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ postData }) {
   return (
-    <Layout title={`${postData.title} - Minimal Portfolio`}>
+    <Layout title={`${postData.title} - World of Krishna`}>
       <article className="max-w-2xl mx-auto">
         <header className="mb-10 text-center">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">{postData.title}</h1>
