@@ -4,8 +4,6 @@ date: "2022-04-30"
 description: "In 2020, I built a TikTok alternative called TinTrin. We hit 10k downloads in 7 days with $0 marketing, then shut it down. Here is the story of my first product failure and the hard lesson I learned about the 'perfect product' trap."
 ---
 
-# TinTrin: How I Built a TikTok Competitor, Got 10k Downloads in a Week, and Why I Shut It Down
-
 ![TinTrin First Banner](/images/tintrin-banner.jpg)
 _That thumbnail is the actual first banner we created on day 01 of building the product, two months before launch._
 
@@ -64,4 +62,4 @@ I don’t know what to call this journey—a failure, foolishness, or a crazy as
 
 But this journey introduced me to **Product Management**. It ignited a passion to build products that scale, taught me the importance of prioritization, and showed me that user experience is everything.
 
-_All thanks to Ashish for introducing me to the world of aspiration. You need a best friend who always comes up with crazy ideas, irrespective of the discouraging and unsupportive environment you are surrounded by._
+_All thanks to Ashish for introducing me to the world of aspiration. You need a friend who always comes up with crazy ideas, irrespective of the discouraging and unsupportive environment you are surrounded by._
