@@ -9,6 +9,7 @@
   body {
     @apply bg-white text-gray-900 transition-colors duration-200 font-sans;
   }
+
   .dark body {
     @apply bg-gray-900 text-gray-100;
   }
@@ -27,9 +28,11 @@ h6 {
 h1 {
   @apply text-4xl mb-4;
 }
+
 h2 {
   @apply text-2xl mb-3;
 }
+
 p {
   @apply mb-4 leading-relaxed;
 }
@@ -47,16 +50,68 @@ p {
     opacity: 0;
     transform: translateY(-2px);
   }
+
   10% {
     opacity: 1;
     transform: translateY(0);
   }
+
   70% {
     opacity: 1;
     transform: translateY(0);
   }
+
   100% {
     opacity: 0;
     transform: translateY(2px);
+  }
+}
+
+/* Project card hover effect */
+.project-card {
+  @apply transition-transform duration-300 ease-out;
+}
+
+.project-card:hover {
+  @apply -translate-y-1;
+}
+
+/* Spotify equalizer animations */
+.animate-equalizer-1 {
+  animation: equalizer 0.8s ease-in-out infinite;
+}
+
+.animate-equalizer-2 {
+  animation: equalizer 0.8s ease-in-out infinite 0.2s;
+}
+
+.animate-equalizer-3 {
+  animation: equalizer 0.8s ease-in-out infinite 0.4s;
+}
+
+@keyframes equalizer {
+
+  0%,
+  100% {
+    height: 40%;
+  }
+
+  50% {
+    height: 100%;
+  }
+}
+
+/* Vinyl disk slow spin animation */
+.animate-spin-slow {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }

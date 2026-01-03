@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import NowPlaying from '../components/NowPlaying';
 import { content } from '../data/content';
 
 export default function Home() {
@@ -11,6 +12,9 @@ export default function Home() {
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed">
           {content.home.description}
         </p>
+
+        {/* Now Playing Widget (powered by Last.fm) */}
+        <NowPlaying />
       </section>
     </Layout>
   );

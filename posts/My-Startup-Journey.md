@@ -1,7 +1,7 @@
 ---
-title: "TinTrin: How I Built a TikTok Competitor, Got 10k Downloads in a Week, and Why I Shut It Down"
+title: "I Built a TikTok Competitor, Got 10k Downloads in a Week, and in 3 Months I Shut It Down"
 date: "2022-04-30"
-description: "In 2020, I built a TikTok alternative called TinTrin. We hit 10k downloads in 7 days with $0 marketing, then shut it down. Here is the story of my first product failure and the hard lesson I learned about the 'perfect product' trap."
+description: "In 2020, I was over ambitious and built a TikTok alternative called TinTrin. We hit 10k downloads in 7 days with $0 marketing..."
 ---
 
 ![TinTrin First Banner](/images/tintrin-banner.jpg)

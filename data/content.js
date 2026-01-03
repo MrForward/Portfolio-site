@@ -5,14 +5,14 @@ export const content = {
     description: "I build AI-driven, user-first products for fast-moving teams.",
   },
   about: {
-    title: "About Me",
+    title: "Figuring Things Out.",
     bio: [
-      "A curious builder and Product Manager with 4+ years of experience taking products from 0 → 1 across B2B and B2C. I’ve shipped and scaled global platforms at Nielsen, led HRTech SaaS at Altimetrik, and previously co-founded a short-video startup.",
+      "A curious builder and Product Manager with 4+ years of experience taking products from 0 → 1 across B2B and B2C. I've shipped and scaled global platforms at Nielsen, led HRTech SaaS at Altimetrik, and previously co-founded a short-video startup.",
       "I like working where ambiguity is high and the feedback loops are fast — talking to users, analysing data, and turning messy problems into simple, elegant workflows."
     ],
-    
+
     current: "I'm learning LangGraph and building AI Agents to reduce operational noise, improve decisions, and unlock new product experiences.",
-    
+
     skillsTitle: "What I do",
     skills: [
       "0 → 1 Product Building",
@@ -46,13 +46,50 @@ export const content = {
   },
   contact: {
     title: "Get in Touch",
-    description: "I’m always up for jamming on new products, AI workflows, or growth ideas. If you’re building something interesting or want help shaping your product let’s talk.",
+    description: "I'm always up for jamming on new products, analyzing micro trends, AI workflows, or growth ideas. If you're building something interesting or want help shaping your product let's talk.",
     email: "hello@chaitanyaa.lol",
     socials: [
       { name: "Twitter / X", link: "https://x.com/chaitanyabuilds" },
+      { name: "GitHub", link: "https://github.com/MrForward" },
       { name: "LinkedIn", link: "https://www.linkedin.com/in/chaitanya-athukuri" },
       { name: "Calendly", link: "https://calendly.com/chaitanyaathukuri/connect" },
-      // { name: "Instagram", link: "https://www.instagram.com/telugu_decodes" },
+    ]
+  },
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // PROJECTS SECTION
+  // To add a new project: Copy a project object and update the fields
+  // To remove a project: Delete the entire object (including the comma)
+  // To reorder: Move the object up/down in the array
+  // Status options: 'Live' | 'In Progress' | 'Coming Soon'
+  // ═══════════════════════════════════════════════════════════════════════════
+  projects: {
+    title: "Selected Side Projects",
+    items: [
+      {
+        title: 'Fumble Machine',
+        description: 'A viral financial regret engine that calculates the real-time opportunity cost of consumer purchases against stock market assets. Engineered for social virality with dynamic \'Loss Receipt\' generation and a multi-platform bot ecosystem.',
+        image: '/projects/fumble-machine.png', // Place images in public/projects/
+        url: 'https://fumble-machine.vercel.app/',
+        year: '2025',
+        status: 'Live',
+      },
+      {
+        title: 'ProdReady',
+        description: 'The automated quality gate for AI-generated code. Instantly transforms messy prototypes into secure, production-ready applications by detecting secret leaks and SEO gaps that LLMs miss.',
+        image: '/projects/prodready.png',
+        url: '#',
+        year: '2025',
+        status: 'Live',
+      },
+      {
+        title: 'SkillTree',
+        description: 'The GPS for self-taught people. An AI agent that turns vague goals (e.g., Learn Rust) into a structured, step-by-step curriculum with top quality open sourced resources and auto-generated quizzes to validate mastery.',
+        image: '/projects/skilltree.png',
+        url: '#',
+        year: '2026',
+        status: 'Coming Soon',
+      },
     ]
   }
 };
