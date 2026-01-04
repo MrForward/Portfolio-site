@@ -69,14 +69,9 @@ export default function NowPlaying() {
                 }
                 const data = await res.json();
 
-                // Debug log for production troubleshooting
-                console.log('NowPlaying: Received data', data);
-
                 // Only update if we have valid song data
                 if (data.title) {
                     setSong(data);
-                } else {
-                    console.warn('NowPlaying: No song title in invalid data', data);
                 }
             } catch (err) {
                 console.error('Error fetching music data:', err);

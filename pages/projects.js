@@ -15,7 +15,7 @@ export default function Projects() {
 
                 {/* Additional callout */}
                 <p className="text-center text-gray-500 dark:text-gray-400 mt-8 text-sm">
-                    ++ 100's of Product Teardowns, A mix of contest winners and humbling critiques.
+                    ++ Completed 100's of Product Teardowns, some are contest winners and some ended with humbling critiques.
                 </p>
             </section>
         </Layout>
