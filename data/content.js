@@ -68,9 +68,9 @@ export const content = {
     items: [
       {
         title: 'Fumble Machine',
-        description: "Ever wondered what that large pizza could've been worth, if invested? If yes, here's a viral financial regret engine that calculates the real-time opportunity cost of consumer purchases against stock market assets. Get a receipt and share in socials to become viral",
+        description: "A viral financial regret engine that calculates the real-time opportunity cost of everyday purchases against the stock market. Generates dynamic, shareable Loss Receipts optimized for social virality.",
         image: '/projects/fumble-machine.png', // Place images in public/projects/
-        url: 'https://fumble-machine.vercel.app/',
+        url: 'https://github.com/MrForward/Fumble-Machine',
         year: '2025',
         status: 'Live',
       },
@@ -78,13 +78,13 @@ export const content = {
         title: 'ProdReady',
         description: 'The automated quality gate for AI-generated code. Instantly transforms messy prototypes into secure, production-ready applications by detecting secret leaks and SEO gaps that LLMs miss.',
         image: '/projects/shipready.png',
-        url: 'https://prod-ready-navy.vercel.app/',
+        url: 'https://prod-ready-navy.vercel.app',
         year: '2025',
         status: 'Live',
       },
       {
         title: 'SkillTree',
-        description: 'The GPS for self-taught people. An AI agent that turns vague goals (e.g., Learn Rust) into a structured, step-by-step curriculum with top quality open sourced resources and auto-generated quizzes to validate mastery.',
+        description: 'The GPS for self-taught people. An AI agent that turns vague goals (e.g., Learn Data Science) into a structured, step-by-step curriculum with top quality resources and auto-generated quizzes to validate mastery.',
         image: '/projects/skilltree.png',
         url: '#',
         year: '2026',
