@@ -68,7 +68,7 @@ export const content = {
     items: [
       {
         title: 'Fumble Machine',
-        description: 'A viral financial regret engine that calculates the real-time opportunity cost of consumer purchases against stock market assets. Engineered for social virality with dynamic \'Loss Receipt\' generation and a multi-platform bot ecosystem.',
+        description: "Ever wondered what that large pizza could've been worth, if invested? If yes, here's a viral financial regret engine that calculates the real-time opportunity cost of consumer purchases against stock market assets. Get a receipt and share in socials to become viral",
         image: '/projects/fumble-machine.png', // Place images in public/projects/
         url: 'https://fumble-machine.vercel.app/',
         year: '2025',
