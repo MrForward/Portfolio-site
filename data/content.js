@@ -75,10 +75,10 @@ export const content = {
         status: 'Live',
       },
       {
-        title: 'ShipReady',
+        title: 'ProdReady',
         description: 'The automated quality gate for AI-generated code. Instantly transforms messy prototypes into secure, production-ready applications by detecting secret leaks and SEO gaps that LLMs miss.',
         image: '/projects/shipready.png',
-        url: '#',
+        url: 'https://prod-ready-navy.vercel.app/',
         year: '2025',
         status: 'Live',
       },
