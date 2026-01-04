@@ -75,9 +75,9 @@ export const content = {
         status: 'Live',
       },
       {
-        title: 'ProdReady',
+        title: 'ShipReady',
         description: 'The automated quality gate for AI-generated code. Instantly transforms messy prototypes into secure, production-ready applications by detecting secret leaks and SEO gaps that LLMs miss.',
-        image: '/projects/prodready.png',
+        image: '/projects/shipready.png',
         url: '#',
         year: '2025',
         status: 'Live',

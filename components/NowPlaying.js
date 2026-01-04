@@ -1,31 +1,37 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-// Vinyl disk with album art - rotates on hover, works in light/dark mode
-const VinylDisk = ({ albumArt, isHovered }) => (
-    <div className={`relative w-8 h-8 flex-shrink-0 transition-transform duration-1000 ${isHovered ? 'rotate-180' : ''}`}>
-        {/* Outer vinyl ring - adapts to theme */}
-        <div className="absolute inset-0 bg-gray-300 dark:bg-gray-600 rounded-full shadow-sm" />
-        {/* Vinyl grooves effect */}
-        <div className="absolute inset-[3px] bg-gray-400 dark:bg-gray-700 rounded-full" />
-        <div className="absolute inset-[5px] bg-gray-300 dark:bg-gray-600 rounded-full" />
-        {/* Inner album art circle */}
-        <div className="absolute inset-[7px] rounded-full overflow-hidden bg-gray-200 dark:bg-gray-500">
-            {albumArt ? (
+// Neon Glow Vinyl record - dark vinyl with cyan/pink edge glow, continuously spinning
+const VinylRecord = ({ albumArt }) => (
+    <div className="relative w-8 h-8 flex-shrink-0 animate-spin" style={{ animationDuration: '3s' }}>
+        {/* Neon glow effect - cyan to pink gradient shadow */}
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-full opacity-75 blur-[2px]" />
+
+        {/* Outer vinyl ring - dark base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-black rounded-full shadow-lg" />
+
+        {/* Vinyl grooves with subtle shine */}
+        <div className="absolute inset-[2px] bg-gray-950 rounded-full" />
+        <div className="absolute inset-[3px] bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-full" />
+        <div className="absolute inset-[5px] bg-gray-950 rounded-full" />
+        <div className="absolute inset-[6px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-full" />
+
+        {/* Inner label/album art circle with neon accent */}
+        <div className="absolute inset-[8px] rounded-full overflow-hidden bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500">
+            {albumArt && (
                 <Image
                     src={albumArt}
                     alt="Album"
                     fill
                     className="object-cover"
-                    sizes="18px"
+                    sizes="16px"
                     unoptimized
                 />
-            ) : (
-                <div className="w-full h-full bg-gradient-to-br from-indigo-400 to-purple-500" />
             )}
         </div>
-        {/* Center hole */}
-        <div className="absolute inset-[12px] bg-gray-100 dark:bg-gray-800 rounded-full" />
+
+        {/* Center spindle hole */}
+        <div className="absolute inset-[12px] bg-gray-900 rounded-full border border-gray-700" />
     </div>
 );
 
@@ -50,7 +56,6 @@ export default function NowPlaying() {
     const [song, setSong] = useState(null);
     const [loading, setLoading] = useState(true);
     const [status, setStatus] = useState({ location: 'Hyderabad', emoji: '📍' });
-    const [isHovered, setIsHovered] = useState(false);
 
     useEffect(() => {
         setStatus(getStatus());
@@ -85,14 +90,9 @@ export default function NowPlaying() {
         };
     }, []);
 
-    // Don't render until we have data
-    if (loading && !song) {
-        return null;
-    }
-
     return (
         <div className="mt-12 text-sm text-gray-500 dark:text-gray-400">
-            {/* Stack vertically on mobile, inline on desktop */}
+            {/* Vertical stack on mobile, inline on desktop */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
                 {/* Music Status */}
                 {song?.title && (
@@ -100,13 +100,11 @@ export default function NowPlaying() {
                         href={song.songUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2.5 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
+                        className="flex items-start sm:items-center gap-2.5 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
                     >
-                        <VinylDisk albumArt={song.albumImageUrl} isHovered={isHovered} />
-                        <span className="leading-snug">
-                            Listening to{' '}
+                        <VinylRecord albumArt={song.albumImageUrl} />
+                        <span className="leading-snug flex-1">
+                            {song.isPlaying ? 'Listening to' : 'Last played'}{' '}
                             <span className="text-gray-700 dark:text-gray-200 font-medium">
                                 {song.title}
                             </span>
@@ -115,7 +113,7 @@ export default function NowPlaying() {
                                 {song.artist}
                             </span>
                         </span>
-                        <svg className="w-3.5 h-3.5 opacity-50 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3.5 h-3.5 opacity-50 flex-shrink-0 mt-1 sm:mt-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
                     </a>
@@ -126,9 +124,14 @@ export default function NowPlaying() {
                     <span className="text-gray-300 dark:text-gray-600 hidden sm:inline">|</span>
                 )}
 
-                {/* Status/Location */}
-                <div className="flex items-center gap-1.5">
-                    <span>{status.emoji}</span>
+                {/* Status/Location - aligned with icon column on mobile */}
+                <div className="flex items-center gap-2.5">
+                    {/* Spacer to align with vinyl record on mobile */}
+                    <div className="w-8 flex justify-center sm:hidden">
+                        <span className="text-base">{status.emoji}</span>
+                    </div>
+                    {/* Desktop emoji */}
+                    <span className="hidden sm:inline">{status.emoji}</span>
                     <span>{status.location}</span>
                 </div>
             </div>

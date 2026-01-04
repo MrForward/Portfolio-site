@@ -6,6 +6,9 @@ export default async function handler(req, res) {
     res.setHeader('Cache-Control', 'public, s-maxage=30, stale-while-revalidate=15');
 
     try {
+        if (!process.env.LASTFM_API_KEY || !process.env.LASTFM_USERNAME) {
+            console.error('PROD DEBUG: Last.fm API keys are missing in environment variables.');
+        }
         const song = await getNowPlaying();
         return res.status(200).json(song);
     } catch (error) {
