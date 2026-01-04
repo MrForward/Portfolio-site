@@ -6,10 +6,16 @@ export default function Contact() {
     <Layout title="Contact - World of Krishna">
       <section className="max-w-xl">
         <h1 className="mb-8">{content.contact.title}</h1>
-        <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-          {content.contact.description}
-        </p>
-        
+        <div className="text-xl text-gray-700 dark:text-gray-300 mb-8 flex flex-col gap-6">
+          {Array.isArray(content.contact.description) ? (
+            content.contact.description.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))
+          ) : (
+            <p>{content.contact.description}</p>
+          )}
+        </div>
+
         <div className="space-y-4">
           <div>
             <h3 className="text-sm uppercase tracking-wider text-gray-500 mb-1">Email</h3>
@@ -17,7 +23,7 @@ export default function Contact() {
               {content.contact.email}
             </a>
           </div>
-          
+
           <div className="pt-8">
             <h3 className="text-sm uppercase tracking-wider text-gray-500 mb-4">Socials</h3>
             <div className="flex flex-col space-y-3">

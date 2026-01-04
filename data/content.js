@@ -26,7 +26,7 @@ export const content = {
     projects: [
       {
         title: 'Nielsen Media - PM 2',
-        description: 'Lead product for three global content-measurement products used by major publishers and platforms across the US & 5 Other Countries',
+        description: 'Leading Digital Content Rating product and delivering 3 global solutions used by major publishers/GICs likes of Google, Disney, Audicom and platforms across the US & 5 Other Countries',
         link: '#',
         year: '2024 - Present',
       },
@@ -46,7 +46,10 @@ export const content = {
   },
   contact: {
     title: "Get in Touch",
-    description: "I'm always up for jamming on new products, analyzing micro trends, AI workflows, or growth ideas. If you're building something interesting or want help shaping your product let's talk.",
+    description: [
+      "I'm always up for jamming on new products, analyzing micro trends and AI workflows.",
+      "If you're building/working on something interesting or want help for your product, Happy to talk."
+    ],
     email: "hello@chaitanyaa.lol",
     socials: [
       { name: "Twitter / X", link: "https://x.com/chaitanyabuilds" },
