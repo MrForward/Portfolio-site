@@ -63,11 +63,20 @@ export default function NowPlaying() {
         const fetchNowPlaying = async () => {
             try {
                 const res = await fetch('/api/lastfm/now-playing');
-                if (!res.ok) throw new Error('Failed to fetch');
+                if (!res.ok) {
+                    console.error('NowPlaying: API returned error', res.status);
+                    throw new Error('Failed to fetch');
+                }
                 const data = await res.json();
+
+                // Debug log for production troubleshooting
+                console.log('NowPlaying: Received data', data);
+
                 // Only update if we have valid song data
                 if (data.title) {
                     setSong(data);
+                } else {
+                    console.warn('NowPlaying: No song title in invalid data', data);
                 }
             } catch (err) {
                 console.error('Error fetching music data:', err);
